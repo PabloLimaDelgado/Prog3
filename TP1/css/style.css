@@ -1,0 +1,271 @@
+/*HTML Y BODY*/
+
+html {
+  background-image: url(../fondo.jpeg);
+  background-size: cover;
+  z-index: 1;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  z-index: 10;
+  background: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 49%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(51, 3, 3, 0.5) 51%
+  );
+  background-size: 200%;
+  animation: moverFondo 10s infinite linear;
+  z-index: -1;
+}
+
+@keyframes moverFondo {
+  0% {
+    background-position: 50%;
+  }
+  25% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 50%;
+  }
+  75% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
+
+/*HEADER*/
+
+.section-header {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.section-header h1 {
+  font-size: 1.5em;
+  font-family: "Anton", sans-serif;
+  color: #e38931;
+}
+
+.section-header i {
+  font-size: 1.5em;
+  color: #e38931;
+}
+
+/*MAIN*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: auto;
+  gap: 1em;
+}
+
+/* SECTION BLOCKQUOTE */
+
+.section-blockquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / -1; /* Otra forma de ocupar toda la fila */
+}
+
+.section-blockquote blockquote {
+  border: 1px solid #e38931;
+  border-radius: 10px;
+  width: auto;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1em;
+  text-align: end;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #e38931;
+  padding: 0.5em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
+/* SECTION DIVS */
+
+.section-divs {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  margin: 1em;
+}
+
+.section-divs div {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.section-divs div h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 1em;
+}
+
+.div-uno {
+  background-image: url(../logan.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 20vw;
+  width: 20vw;
+  box-shadow: 0px 4px 15px rgba(227, 137, 49, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+}
+
+.div-uno:hover {
+  box-shadow: 0px 8px 25px rgba(227, 137, 49, 1);
+}
+
+.div-dos {
+  background-image: url(../deadpoll.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #90172a;
+  height: 20vw;
+  width: 20vw;
+
+  display: flex;
+  justify-content: center;
+}
+
+.div-dos:hover {
+  background-size: 80%;
+}
+
+/* Posiciones */
+.posiciones {
+  gap: 1em;
+}
+
+.posicion-relativa {
+  position: relative;
+  width: min-content;
+  left: 50%;
+  transform: translateX(-50%); /*Va hacia la mitad de su tamaño*/
+}
+
+.posicion-relativa table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em;
+  box-shadow: 0px 8px 25px rgb(0, 0, 0);
+  background: rgb(227, 137, 49);
+  background: linear-gradient(
+    90deg,
+    rgba(227, 137, 49, 1) 29%,
+    rgba(144, 23, 42, 1) 35%
+  );
+}
+
+.posicion-relativa table tbody tr th {
+  border: 1px solid black;
+  padding: 0.5em;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.posicion-absoluta {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  height: 10vw;
+  width: 10vw;
+  background-image: url(../background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) and (min-width: 424px){
+  .section-header h1 {
+    font-size: 1em;
+  }
+
+  .section-header i {
+    font-size: 1em;
+  }
+
+  .section-blockquote blockquote {
+    font-size: 0.7em;
+  }
+
+  .posicion-relativa table {
+    background: linear-gradient(
+      90deg,
+      rgba(144, 23, 42, 1) 29%,
+      rgba(227, 137, 49, 1) 35%
+    );
+  }
+
+  .posicion-relativa table tbody tr th {
+    font-size: 1em;
+  }
+
+  .section-divs div h1 {
+    font-size: 0.7em;
+  }
+  
+}
+
+@media screen and (max-width: 425px) {
+  .section-divs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-header h1 {
+    font-size: 0.5em;
+  }
+
+  .section-header i {
+    font-size: 0.5em;
+  }
+
+  .section-blockquote blockquote {
+    font-size: 0.4em;
+  }
+
+  .posicion-relativa table {
+    background: linear-gradient(
+      90deg,
+      rgba(227, 137, 49, 1) 29%,
+      rgba(144, 23, 42, 1) 35%
+    );
+  }
+
+  .posicion-relativa table tbody tr th {
+    font-size: 0.2em;
+  }
+
+  .section-divs div h1 {
+    font-size: 0.5em;
+  }
+}
