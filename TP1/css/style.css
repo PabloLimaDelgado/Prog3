@@ -1,7 +1,7 @@
 /*HTML Y BODY*/
 
 html {
-  background-image: url(../fondo.jpeg);
+  background-image: url(../assets/images/fondo.jpeg);
   background-size: cover;
   z-index: 1;
   height: 100%;
@@ -54,7 +54,6 @@ body::before {
 .section-header {
   margin: 0;
   padding: 0;
-  margin-left: 0.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -62,6 +61,7 @@ body::before {
 }
 
 .section-header h1 {
+  margin-left: 0.5em;
   font-size: 1.5em;
   font-family: "Anton", sans-serif;
   color: #e38931;
@@ -93,7 +93,7 @@ main {
 }
 
 .section-blockquote blockquote {
-  border: 1px solid #e38931;
+  border: 1px solid black;
   border-radius: 10px;
   width: auto;
   font-family: "Bebas Neue", sans-serif;
@@ -105,6 +105,7 @@ main {
   padding: 0.5em;
   padding-left: 0.7em;
   padding-right: 0.7em;
+  background-color: rgba(144, 23, 42, 0.2);
 }
 
 /* SECTION DIVS */
@@ -128,7 +129,7 @@ main {
 }
 
 .div-uno {
-  background-image: url(../logan.jpeg);
+  background-image: url(../assets/images/logan.jpeg);
   background-position: center;
   background-size: cover;
   height: 20vw;
@@ -145,7 +146,7 @@ main {
 }
 
 .div-dos {
-  background-image: url(../deadpoll.jpeg);
+  background-image: url(../assets/images/deadpoll.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,6 +165,7 @@ main {
 /* Posiciones */
 .posiciones {
   gap: 1em;
+
 }
 
 .posicion-relativa {
@@ -181,8 +183,8 @@ main {
   background: rgb(227, 137, 49);
   background: linear-gradient(
     90deg,
-    rgba(227, 137, 49, 1) 29%,
-    rgba(144, 23, 42, 1) 35%
+    rgba(227, 137, 49, 0.5) 25%,
+    rgba(144, 23, 42, 0.5) 35%
   );
 }
 
@@ -199,12 +201,12 @@ main {
   margin: 1em;
   height: 10vw;
   width: 10vw;
-  background-image: url(../background.png);
+  background-image: url(../assets/images/background.png);
   background-position: center;
   background-size: cover;
 }
 
-@media screen and (max-width: 768px) and (min-width: 424px){
+@media screen and (max-width: 768px) and (min-width: 424px) {
   .section-header h1 {
     font-size: 1em;
   }
@@ -220,7 +222,7 @@ main {
   .posicion-relativa table {
     background: linear-gradient(
       90deg,
-      rgba(144, 23, 42, 1) 29%,
+      rgba(144, 23, 42, 1) 25%,
       rgba(227, 137, 49, 1) 35%
     );
   }
@@ -232,7 +234,6 @@ main {
   .section-divs div h1 {
     font-size: 0.7em;
   }
-  
 }
 
 @media screen and (max-width: 425px) {
@@ -256,7 +257,7 @@ main {
   .posicion-relativa table {
     background: linear-gradient(
       90deg,
-      rgba(227, 137, 49, 1) 29%,
+      rgba(227, 137, 49, 1) 25%,
       rgba(144, 23, 42, 1) 35%
     );
   }
