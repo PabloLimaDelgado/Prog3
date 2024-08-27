@@ -1,0 +1,138 @@
+@import "../../base/_variable.scss";
+
+main {
+  .container__view {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+
+    .list__aside {
+      background-color: white;
+      height: 92vh;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        display: flex;
+        font-size: 3vh;
+        margin-top: 2vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 1vh;
+        margin-top: 3vh;
+
+        li {
+          font-size: 2vh;
+          font-weight: 500;
+          padding: $padding-rem;
+          border-radius: $boder-radius-rem;
+        }
+
+        li:hover {
+          cursor: pointer;
+        }
+
+        .li__active {
+          background-color: $background-color-header;
+          color: white;
+        }
+      }
+    }
+
+    .store {
+      background-color: red;
+      height: 92vh;
+    }
+  }
+
+  .pop__pup__container__principal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+
+    .pop__pup__container {
+      width: 40vw;
+      height: 50vh;
+      background-color: white;
+      box-shadow: 5px 2px 10px 10px rgba(0, 0, 0, 0.4);
+      border-radius: $boder-radius-rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      div {
+        h1 {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 0.4rem;
+        }
+      }
+
+      .container__inputs__popup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+
+        input {
+          width: 60%;
+          border: 1px solid grey;
+          padding: $padding-rem;
+          border-radius: $boder-radius-rem;
+        }
+
+        select {
+          width: 60%;
+          border: 1px solid grey;
+          padding: $padding-rem;
+          border-radius: $boder-radius-rem;
+        }
+      }
+
+      .container__btn_popup {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .btn__popup {
+          padding: 0.6rem;
+          border: none;
+          border-radius: $boder-radius-rem;
+          font-size: 2vh;
+        }
+
+        .btn__popup:hover {
+          cursor: pointer;
+        }
+
+        .cancel {
+          background-color: yellow;
+        }
+
+        .accept {
+          background-color: rgb(25, 239, 25);
+        }
+
+        .delete {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
