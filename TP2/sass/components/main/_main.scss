@@ -39,6 +39,8 @@ main {
 
         li:hover {
           cursor: pointer;
+          background-color: $background-color-header;
+          color: white;
         }
 
         .li__active {
@@ -49,8 +51,68 @@ main {
     }
 
     .store {
-      background-color: red;
-      height: 92vh;
+      background-color: #eeee;
+      max-height: 92vh;
+      width: 100%;
+      overflow-y: auto;
+
+      .section__store {
+        background-color: white;
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+
+        h3 {
+          font-size: 3vh;
+          margin: 1rem;
+          border-bottom: 1px solid gray;
+        }
+
+        .container__product {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 5vh;
+
+          .container__target__item {
+            width: 15vw;
+            height: 40vh;
+            display: flex;
+            padding: 0.4rem;
+            box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 1);
+            border-radius: $boder-radius-rem;
+            justify-content: center;
+            transition: transform 0.3s ease;
+
+            div {
+              padding: 0.4rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 100%;
+                height: 80%;
+                border-radius: $boder-radius-rem;
+              }
+
+              h2 {
+                font-size: 2vh;
+                text-align: center;
+              }
+            }
+          }
+
+          .container__target__item:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 
@@ -135,4 +197,31 @@ main {
       }
     }
   }
+}
+
+/*===MEDIA QUERYS===*/
+@media screen and (min-width: 1200px) {
+  .container__product {
+    grid-template-columns: repeat(4, 0.6);
+  }
+
+  .container__target__item {
+    width: 15vw;
+  }
+}
+
+/*===SCROLLBAR===*/
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background-color: white;
+  border-radius: $boder-radius-rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $background-color-header;
+  border-radius: $boder-radius-rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #246dd9;
 }

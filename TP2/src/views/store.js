@@ -1,6 +1,6 @@
 /*STORE*/
-
 import { handleGetProductsLocalStorage } from "../persistence/localStorage.js";
+import { openModal, setProductoActivo } from "./modal.js";
 
 //FUNCION QUE TRAE LOS ELEMENTOS Y LLAMAR AL RENDER
 export const handleGetProductsToStore = () => {
@@ -20,15 +20,14 @@ export const handleRenderList = (productsIn) => {
     if (products.length > 0) {
       const productsHTML = products.map((producto, index) => {
         return `
-        <div id="product-${producto.categoria}-${index}"> 
+        <div class="container__target__item" id="product-${producto.categoria}-${index}"> 
             <div> 
-                <img src="${producto.imagen}"/>
+                <img src='${producto.imagen}'/>
                 <div>
                     <h2>${producto.name}</h2>
                 </div>
                 <div>
                     <p><b>Precio:</b> ${producto.precio}</p>
-                    <p><b>Categoria:</b> ${producto.categoria}</p>
                 </div>
            </div>
         </div>
@@ -37,9 +36,9 @@ export const handleRenderList = (productsIn) => {
 
       //RETORNA LA SECCION CON TODOS LOS ELEMENTOS DENTRO
       return `
-      <section>
+      <section class="section__store">
         <h3>${title}</h3>
-        <div>
+        <div class="container__product">
             ${productsHTML.join("")}
         </div>
       </section>
@@ -65,7 +64,10 @@ export const handleRenderList = (productsIn) => {
         `product-${element.categoria}-${index}`
       );
       productContainer.addEventListener("click", () => {
-        console.log("productoActivo", element);
+        console.log(element);
+        
+        setProductoActivo(element);
+        openModal();
       });
     });
   };

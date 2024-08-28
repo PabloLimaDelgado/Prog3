@@ -8,17 +8,16 @@ export const handleGetProductsLocalStorage = () => {
 };
 
 /*===== GUARDAR LOCAL STORAGE =====*/
-
 //RECIBIR UN PRODUCTO
 export const setInLocalStorage = (productIn) => {
   if (productIn) {
     //TRAER LOS ELEMENTOS
     let productInLocal = handleGetProductsLocalStorage();
     const existingIndex = productInLocal.findIndex(
-      (productsLocal) => productsLocal === productIn.id
+      (productsLocal) => productsLocal.id === productIn.id
     );
 
-    //VERIFICR SI EL ELEMENTO EXISTE
+    //VERIFICAR SI EL ELEMENTO EXISTE
     if (existingIndex !== -1) {
       productInLocal[existingIndex] = productIn;
     } else {
