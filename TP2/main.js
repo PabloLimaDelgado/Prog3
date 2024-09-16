@@ -1,7 +1,5 @@
 import { renderCategories } from "./src/services/categories.js";
 import { handleGetProductsToStore } from "./src/views/store.js";
-
-import "./css/style.css";
 import { openModal, closeModal } from "./src/views/modal.js";
 import { handleSveOrModifyElements } from "./src/services/products.js";
 import { handleSearchProduct } from "./src/services/searchBar.js";

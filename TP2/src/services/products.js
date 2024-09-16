@@ -36,7 +36,7 @@ export const handleSveOrModifyElements = () => {
   Swal.fire({
     title: "Correcto",
     text: "Producto guardado correctamente",
-    icon: "success"
+    icon: "success",
   });
 
   setInLocalStorage(object);
