@@ -10,4 +10,4 @@ Este va a ser el repositorio de todos los trabajos practicos equivalentes a Prog
 <br / >
 <p> <b>TP-REACT: </b>Entrega del trabajo de React con Typescript</p>
 <br / >
-<p> <b>TP-REACT: </b>Entrega del trabajo de la pagina de heroes</p>
+<p> <b>HERO PAGE: </b>Entrega del trabajo de la pagina de heroes</p>
