@@ -27,5 +27,5 @@ Bienvenido/a a este repositorio donde se encuentran los trabajos prácticos real
 
 ---
 
-> Este repositorio está en constante actualización con los avances de los trabajos prácticos. ¡A seguir aprendiendo y mejorando!
+> Este repositorio está en constante actualización con los avances de los trabajos prácticos.
 
