@@ -4,7 +4,7 @@ Bienvenido/a a este repositorio donde se encuentran los trabajos prácticos real
 
 ## 📂 Entregas
 
-### 1. [TP1: HTML & CSS](./tp1) 
+### 1. [TP1: HTML & CSS](./TP1) 
 **Descripción:** Primer trabajo práctico enfocado en la creación de páginas web utilizando HTML y CSS.
 
 ### 2. [TP-JS: JavaScript](./tp-js) 
